@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
 </head>
 
 <body>
-
     <div class="navbar-wrapper">
         <nav class="navbar">
             <div class="nav-container">
@@ -104,8 +102,7 @@
         </div>
     </section>
 
-
-    <div class="container" id="about-section">
+    <div class="about-container" id="about-section">
         <div class="left-side">
             <img src="about1.png" alt="Big Image" class="big-image">
         </div>
@@ -126,6 +123,21 @@
             <img src="about2.png" alt="Additional Image" class="small-image">
         </div>
     </div>
+
+    <div class="container">
+        <div class="tweet">
+            <img src="t1.png" alt="Image 1" class="tweet-image">
+        </div>
+        <div class="tweet-row">
+            <div class="tweet">
+                <img src="t2.png" alt="Image 2" class="tweet-image">
+            </div>
+            <div class="tweet">
+                <img src="t3.png" alt="Image 3" class="tweet-image">
+            </div>
+        </div>
+    </div>
+
 
     <div class="tokenomics-container" id="tokenomics">
         <h2 class="tokenomics-title">TOKENOMICS</h2>
@@ -149,46 +161,47 @@
         </div>
     </div>
 
-    <div class="how-to-buy-container" id="how-to-buy-section">
+    <div class="how-to-buy-container">
         <h2 class="how-to-buy-title">HOW TO BUY</h2>
 
-        <div class="how-to-buy-box">
-            <div class="box-icon">
-                <img src="but1.png" alt="Create a Wallet Icon" />
+        <div class="how-to-buy-grid">
+            <div class="how-to-buy-box">
+                <div class="box-icon">
+                    <img src="but1.png" alt="Create a Wallet Icon" />
+                </div>
+                <h3 class="box-title">CREATE A WALLET</h3>
+                <p class="box-description">Download Metamask or your wallet of choice from the app store or Google Play
+                    Store for free. Desktop users download the Google Chrome extension by going to metamask.io.</p>
             </div>
-            <h3 class="box-title">CREATE A WALLET</h3>
-            <p class="box-description">Download Metamask or your wallet of choice from the app store or Google Play
-                Store for free. Desktop users download the Google Chrome extension by going to metamask.io.</p>
-        </div>
 
-        <div class="how-to-buy-box">
-            <div class="box-icon">
-                <img src="buy2.png" alt="Get Some ETH Icon" />
+            <div class="how-to-buy-box">
+                <div class="box-icon">
+                    <img src="buy2.png" alt="Get Some ETH Icon" />
+                </div>
+                <h3 class="box-title">GET SOME ETH</h3>
+                <p class="box-description">Have ETH in your wallet to switch to $TAXI. If you don't have any ETH, you
+                    can buy directly on Metamask. Transfer from another wallet or buy on another exchange and send it to
+                    your wallet.</p>
             </div>
-            <h3 class="box-title">GET SOME ETH</h3>
-            <p class="box-description">Have ETH in your wallet to switch to $TAXI. If you don’t have any ETH, you can
-                buy directly on Metamask. Transfer from another wallet or buy on another exchange and send it to your
-                wallet.</p>
-        </div>
 
-        <div class="how-to-buy-box">
-            <div class="box-icon">
-                <img src="buy3.png" alt="Go to Uniswap Icon" />
+            <div class="how-to-buy-box">
+                <div class="box-icon">
+                    <img src="buy3.png" alt="Go to Uniswap Icon" />
+                </div>
+                <h3 class="box-title">GO TO UNISWAP</h3>
+                <p class="box-description">Connect to Uniswap, go to app.uniswap.org in Google Chrome or on the browser
+                    inside your Metamask app. Connect your wallet: Paste the sticker token address into Uniswap, select
+                    Robotaxi, and confirm when Metamask prompts you for a wallet signature.</p>
             </div>
-            <h3 class="box-title">GO TO UNISWAP</h3>
-            <p class="box-description">Connect to Uniswap, go to app.uniswap.org in Google Chrome or on the browser
-                inside your Metamask app. Connect your wallet: Paste the sticker token address into Uniswap, select
-                Robotaxi, and confirm when Metamask prompts you for a wallet signature.</p>
-        </div>
 
-        <div class="how-to-buy-box">
-            <div class="box-icon">
-                <img src="buy4.png" alt="Go to Uniswap Icon" />
+            <div class="how-to-buy-box">
+                <div class="box-icon">
+                    <img src="buy4.png" alt="Another Action Icon" />
+                </div>
+                <h3 class="box-title">FINALIZE PURCHASE</h3>
+                <p class="box-description">Review your transaction details and finalize your purchase. Congratulations
+                    on your investment in Robotaxi!</p>
             </div>
-            <h3 class="box-title">GO TO UNISWAP</h3>
-            <p class="box-description">Connect to Uniswap, go to app.uniswap.org in Google Chrome or on the browser
-                inside your Metamask app. Connect your wallet: Paste the sticker token address into Uniswap, select
-                Robotaxi, and confirm when Metamask prompts you for a wallet signature.</p>
         </div>
     </div>
 
@@ -216,8 +229,6 @@
             </div>
         </div>
     </footer>
-
-
 
     <script src="script.js"></script>
 </body>

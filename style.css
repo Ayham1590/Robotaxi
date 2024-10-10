@@ -272,76 +272,104 @@ body {
     }
 }
 
-.container {
+.about-container {
     display: flex;
     flex-direction: row;
+    /* Default to row for larger screens */
     align-items: center;
+    justify-content: space-between;
+    /* Space between elements */
     padding: 20px 90px;
+    /* Padding for larger screens */
     background-color: #111b3f;
+    /* Background color */
 }
 
 .left-side {
     flex: 1;
     text-align: center;
+    /* Center the left-side content */
 }
 
 .right-side {
     flex: 1;
-    max-width: 100%;
     text-align: left;
+    /* Left-aligned text for larger screens */
 }
 
 .big-image {
     width: 70%;
+    /* Width for the large image */
     height: auto;
     border-radius: 10px;
 }
 
 .small-image {
     width: 80%;
+    /* Width for the small image */
     height: auto;
     margin-top: 20px;
+    /* Space above the small image */
     border-radius: 10px;
 }
 
 .title {
     font-size: 24px;
+    /* Title font size */
     font-weight: bold;
+    /* Title weight */
     margin-top: 20px;
+    /* Space above titles */
     color: orange;
+    /* Title color */
 }
 
 .paragraph {
     font-size: 16px;
+    /* Paragraph font size */
     margin-top: 10px;
+    /* Space above paragraphs */
     color: white;
+    /* Paragraph color */
 }
 
 @media (max-width: 768px) {
-    .container {
-        flex-direction: row;
-        display: flex;
+    .about-container {
         flex-direction: column;
+        /* Stack elements vertically on mobile */
         align-items: center;
+        /* Center align items */
         padding: 20px 10px;
-        background-color: #111b3f;
+        /* Reduce padding on mobile */
     }
 
     .left-side,
     .right-side {
-        flex: 1;
-    }
-
-    .paragraph {
-        font-size: 12px;
-        margin-top: 10px;
-        color: white;
+        text-align: center;
+        /* Center text for both sides on mobile */
     }
 
     .big-image {
         display: none;
+        /* Hide the big image on mobile */
+    }
+
+    .small-image {
+        width: 100%;
+        /* Make the small image full width on mobile */
+    }
+
+    .title {
+        font-size: 30px;
+        /* Adjust title size for mobile */
+    }
+
+    .paragraph {
+        font-size: 14px;
+        /* Adjust paragraph size for mobile */
     }
 }
+
 
 .tokenomics-container {
     text-align: center;
@@ -402,7 +430,7 @@ body {
     }
 
     .tokenomics-container {
-        height: 100vh;
+        height: 120vh;
     }
 }
 
@@ -414,7 +442,6 @@ body {
     flex-direction: column;
     padding: 20px;
     background-color: #111b3f;
-    height: 140vh;
 }
 
 .how-to-buy-title {
@@ -424,12 +451,19 @@ body {
     margin-bottom: 20px;
 }
 
+.how-to-buy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns for desktop */
+    gap: 20px;
+    /* Space between boxes */
+}
+
 .how-to-buy-box {
     border: 4px dotted yellow;
     background: transparent;
     color: white;
     padding: 20px;
-    margin: 20px 100px;
     border-radius: 8px;
     transition: transform 0.2s;
 }
@@ -444,6 +478,7 @@ body {
 
 .box-icon img {
     width: 50px;
+    /* Adjust icon size */
     height: auto;
 }
 
@@ -458,30 +493,28 @@ body {
     font-size: 16px;
 }
 
+/* Responsive styles for mobile */
 @media (max-width: 768px) {
-
-    .how-to-buy-container {
-        height: 150vh;
-
-    }
-
-    .how-to-buy-box {
-        padding: 15px;
-        margin: 20px 20px;
-    }
-
-    .box-icon img {
-        width: 40px;
+    .how-to-buy-grid {
+        grid-template-columns: 1fr;
+        /* Stack boxes vertically on mobile */
     }
 
     .how-to-buy-title {
         font-size: 40px;
+        /* Adjust title size for mobile */
     }
 
     .box-description {
-        font-size: 12px;
+        font-size: 14px;
+        /* Adjust paragraph size for mobile */
+    }
+
+    .how-to-buy-box {
+        padding: 15px;
     }
 }
+
 
 .community-section {
     background-image: linear-gradient(180deg, #13191F 0%, #11161E 100%);
@@ -593,5 +626,66 @@ body {
 
     .footer-right {
         justify-content: center;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align items */
+    padding: 20px;
+    background-color: #111b3f;
+    /* Background color for the container */
+}
+
+.tweet {
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    max-width: 500px;
+    /* Optional: max width for each tweet */
+    margin: 10px 0;
+    border-radius: 10px;
+    /* Margin for spacing */
+}
+
+.tweet:hover {
+    transform: scale(1.05);
+}
+
+.tweet-image {
+    width: 500px;
+    /* Make image responsive to container */
+    height: auto;
+}
+
+/* Additional styles for layout */
+.tweet-row {
+    display: flex;
+    /* Use flexbox for bottom images */
+    justify-content: center;
+    /* Center align the bottom images */
+    width: 100%;
+    /* Take full width of the container */
+}
+
+.tweet-row .tweet {
+    margin: 0 10px;
+    /* Margin between images */
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    .tweet {
+        max-width: 90%;
+        /* Adjust max-width for smaller screens */
+    }
+
+    .tweet-image {
+        height: auto;
+        width: 200px;
     }
 }
