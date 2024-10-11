@@ -137,7 +137,8 @@ body {
 
 .hero-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -155,7 +156,13 @@ body {
 .hero-text h1 {
     font-size: 100px;
     margin-bottom: 20px;
-    color: orange;
+    background: linear-gradient(90deg, #FFD700, #FFEA00, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.5);
+    /* Optional: add some shadow for depth */
 }
 
 .hero-social-links {
@@ -207,6 +214,8 @@ body {
     transform: scale(1.1);
 }
 
+
+
 @media (max-width: 768px) {
     .hero-section {
         height: 100vh;
@@ -232,6 +241,7 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
+
     }
 
     .hero-text {
@@ -275,8 +285,9 @@ body {
 .about-container {
     display: flex;
     flex-direction: row;
-    /* Default to row for larger screens */
+    /* Keep as row for larger screens */
     align-items: center;
+    /* Align items to the start */
     justify-content: space-between;
     /* Space between elements */
     padding: 20px 90px;
@@ -287,50 +298,51 @@ body {
 
 .left-side {
     flex: 1;
+    /* Take equal space */
     text-align: center;
     /* Center the left-side content */
 }
 
+.title {
+    font-size: 30px;
+    background: linear-gradient(90deg, #FFD700, #FFEA00, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.5);
+    /* Optional: add some shadow for depth */
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}
+
 .right-side {
     flex: 1;
+    /* Take equal space */
     text-align: left;
+    padding-left: 50px;
     /* Left-aligned text for larger screens */
 }
 
 .big-image {
-    width: 70%;
-    /* Width for the large image */
+    width: 100%;
+    /* Full width for the big image */
     height: auto;
     border-radius: 10px;
 }
 
 .small-image {
-    width: 80%;
-    /* Width for the small image */
+    width: 100%;
+    /* Full width for the small image */
     height: auto;
     margin-top: 20px;
     /* Space above the small image */
     border-radius: 10px;
-}
-
-.title {
-    font-size: 24px;
-    /* Title font size */
-    font-weight: bold;
-    /* Title weight */
-    margin-top: 20px;
-    /* Space above titles */
-    color: orange;
-    /* Title color */
-}
-
-.paragraph {
-    font-size: 16px;
-    /* Paragraph font size */
-    margin-top: 10px;
-    /* Space above paragraphs */
-    color: white;
-    /* Paragraph color */
 }
 
 @media (max-width: 768px) {
@@ -339,19 +351,27 @@ body {
         /* Stack elements vertically on mobile */
         align-items: center;
         /* Center align items */
+        justify-content: center;
+        /* Center items vertically */
         padding: 20px 10px;
         /* Reduce padding on mobile */
+        height: 200vh;
+        /* Set height to full viewport height */
     }
 
     .left-side,
     .right-side {
         text-align: center;
         /* Center text for both sides on mobile */
+        width: 100%;
+        /* Ensure both sides take full width */
     }
 
     .big-image {
-        display: none;
-        /* Hide the big image on mobile */
+        display: block;
+        /* Show the big image on mobile */
+        width: 100%;
+        /* Ensure full width for the image */
     }
 
     .small-image {
@@ -374,8 +394,8 @@ body {
 .tokenomics-container {
     text-align: center;
     padding: 20px;
-    background-image: linear-gradient(180deg, #13191F 0%, #11161E 100%);
-    height: 70vh;
+    background: #111b3f;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -385,7 +405,12 @@ body {
 .tokenomics-title {
     font-size: 60px;
     font-weight: bold;
-    color: yellow;
+    background: linear-gradient(90deg, #FFD700, #FFEA00, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.5);
+    /* Optional: add some shadow for depth */
     margin-bottom: 20px;
 }
 
@@ -442,12 +467,18 @@ body {
     flex-direction: column;
     padding: 20px;
     background-color: #111b3f;
+    height: 100vh;
 }
 
 .how-to-buy-title {
     font-size: 70px;
+    background: linear-gradient(90deg, #FFD700, #FFEA00, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bold;
-    color: yellow;
+    /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.5);
+    /* Optional: add some shadow for depth */
     margin-bottom: 20px;
 }
 
@@ -495,6 +526,10 @@ body {
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
+    .how-to-buy-container {
+        height: 150vh;
+    }
+
     .how-to-buy-grid {
         grid-template-columns: 1fr;
         /* Stack boxes vertically on mobile */
@@ -528,7 +563,7 @@ body {
 }
 
 .community-image {
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
     margin-bottom: 20px;
     border-radius: 10px;
